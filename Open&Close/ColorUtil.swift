@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct ColorUtil {
-    static func rgbColorByHex(hexColor:Int) -> UIColor{
+    static func rgbColorByHex(hexColor:Int) -> (UIColor){
         return UIColor(red: ((CGFloat)((hexColor & 0xFF0000) >> 16)) / 255.0,
                        green: ((CGFloat)((hexColor & 0xFF00) >> 8)) / 255.0,
                        blue: ((CGFloat)(hexColor & 0xFF)) / 255.0,
