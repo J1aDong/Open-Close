@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		905627581DE91F7E009A545D /* ColorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905627571DE91F7E009A545D /* ColorUtil.swift */; };
 		90991F061DE8740C00433B7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90991F051DE8740C00433B7B /* AppDelegate.swift */; };
 		90991F081DE8740C00433B7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90991F071DE8740C00433B7B /* ViewController.swift */; };
 		90991F0B1DE8740C00433B7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90991F091DE8740C00433B7B /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		90991F101DE8740C00433B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90991F0F1DE8740C00433B7B /* Assets.xcassets */; };
 		90991F131DE8740C00433B7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90991F111DE8740C00433B7B /* LaunchScreen.storyboard */; };
 		90991F1E1DE8740C00433B7B /* Open_CloseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90991F1D1DE8740C00433B7B /* Open_CloseTests.swift */; };
+		F113AF3D962E4DE5DAAD009A /* Pods_Open_Close.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E747F0B29C126D23B6A564 /* Pods_Open_Close.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		199EC977C6B249A84D70F921 /* Pods-Open&Close.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Open&Close.release.xcconfig"; path = "Pods/Target Support Files/Pods-Open&Close/Pods-Open&Close.release.xcconfig"; sourceTree = "<group>"; };
+		1B343EBA06ECDFCDD06EAAF1 /* Pods-Open&Close.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Open&Close.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Open&Close/Pods-Open&Close.debug.xcconfig"; sourceTree = "<group>"; };
+		905627571DE91F7E009A545D /* ColorUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtil.swift; sourceTree = "<group>"; };
 		90991F021DE8740C00433B7B /* Open&Close.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Open&Close.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90991F051DE8740C00433B7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90991F071DE8740C00433B7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +43,7 @@
 		90991F191DE8740C00433B7B /* Open&CloseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Open&CloseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90991F1D1DE8740C00433B7B /* Open_CloseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Open_CloseTests.swift; sourceTree = "<group>"; };
 		90991F1F1DE8740C00433B7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0E747F0B29C126D23B6A564 /* Pods_Open_Close.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Open_Close.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F113AF3D962E4DE5DAAD009A /* Pods_Open_Close.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +65,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2936B18E12098ED297679043 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B343EBA06ECDFCDD06EAAF1 /* Pods-Open&Close.debug.xcconfig */,
+				199EC977C6B249A84D70F921 /* Pods-Open&Close.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		90991EF91DE8740C00433B7B = {
 			isa = PBXGroup;
 			children = (
 				90991F041DE8740C00433B7B /* Open&Close */,
 				90991F1C1DE8740C00433B7B /* Open&CloseTests */,
 				90991F031DE8740C00433B7B /* Products */,
+				2936B18E12098ED297679043 /* Pods */,
+				C583E582A6C02B3487F666F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +104,7 @@
 				90991F111DE8740C00433B7B /* LaunchScreen.storyboard */,
 				90991F141DE8740C00433B7B /* Info.plist */,
 				90991F0C1DE8740C00433B7B /* Open_Close.xcdatamodeld */,
+				905627571DE91F7E009A545D /* ColorUtil.swift */,
 			);
 			path = "Open&Close";
 			sourceTree = "<group>";
@@ -99,6 +118,14 @@
 			path = "Open&CloseTests";
 			sourceTree = "<group>";
 		};
+		C583E582A6C02B3487F666F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0E747F0B29C126D23B6A564 /* Pods_Open_Close.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90991F221DE8740C00433B7B /* Build configuration list for PBXNativeTarget "Open&Close" */;
 			buildPhases = (
+				37A96D53D3A16337A1362715 /* [CP] Check Pods Manifest.lock */,
 				90991EFE1DE8740C00433B7B /* Sources */,
 				90991EFF1DE8740C00433B7B /* Frameworks */,
 				90991F001DE8740C00433B7B /* Resources */,
+				55ED72E9EF34D6F2F489951F /* [CP] Embed Pods Frameworks */,
+				E2F2601D49E1D91C5BEB74FB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,6 +229,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		37A96D53D3A16337A1362715 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		55ED72E9EF34D6F2F489951F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Open&Close/Pods-Open&Close-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2F2601D49E1D91C5BEB74FB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Open&Close/Pods-Open&Close-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		90991EFE1DE8740C00433B7B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -207,6 +285,7 @@
 				90991F081DE8740C00433B7B /* ViewController.swift in Sources */,
 				90991F061DE8740C00433B7B /* AppDelegate.swift in Sources */,
 				90991F0E1DE8740C00433B7B /* Open_Close.xcdatamodeld in Sources */,
+				905627581DE91F7E009A545D /* ColorUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +422,7 @@
 		};
 		90991F231DE8740C00433B7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B343EBA06ECDFCDD06EAAF1 /* Pods-Open&Close.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PH2TMWBZ42;
@@ -356,6 +436,7 @@
 		};
 		90991F241DE8740C00433B7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 199EC977C6B249A84D70F921 /* Pods-Open&Close.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PH2TMWBZ42;
@@ -416,6 +497,7 @@
 				90991F241DE8740C00433B7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90991F251DE8740C00433B7B /* Build configuration list for PBXNativeTarget "Open&CloseTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +506,7 @@
 				90991F271DE8740C00433B7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
