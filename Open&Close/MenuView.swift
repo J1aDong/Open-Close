@@ -25,6 +25,8 @@ class MenuView: UIView {
         menuLayer.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
         menuLayer.contentsScale = UIScreen.main.scale
         
+//        self.backgroundColor = UIColor.gray
+        
         menuLayer.setNeedsDisplay()
         layer.addSublayer(menuLayer)
     }

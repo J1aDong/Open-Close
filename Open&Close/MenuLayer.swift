@@ -17,17 +17,22 @@ enum MenuState {
 
 class MenuLayer: CALayer {
     
+    let mPadding:CGFloat = 20.0
+    
     var isFirst = true
     
     var line1Point1 = CGPoint()
     var line1Point2 = CGPoint()
+    var line2Point1 = CGPoint()
+    var line2Point2 = CGPoint()
     
     var animatableValue:CGFloat = 0.0{
         didSet{
-            line1Point1.y = SpringUtil.mapValueFromRangeToRange(value: animatableValue, fromLow: 0, fromHigh: 1, toLow: 10, toHigh: self.frame.height - 40)
-            let value = SpringUtil.mapValueFromRangeToRange(value: animatableValue, fromLow: 0, fromHigh: 1, toLow: self.frame.width - 10, toHigh: self.frame.width - 20)
-            print("vale-->\(value)")
-            line1Point2.x = value
+            print("vale-->\(animatableValue)")
+            line1Point1.y = SpringUtil.mapValueFromRangeToRange(value: animatableValue, fromLow: 0, fromHigh: 1, toLow: mPadding, toHigh: self.frame.height - mPadding)
+            line1Point2.x = SpringUtil.mapValueFromRangeToRange(value: animatableValue, fromLow: 0, fromHigh: 1, toLow: self.frame.width - mPadding, toHigh: self.frame.width - mPadding*1.1)
+            line2Point1.y = SpringUtil.mapValueFromRangeToRange(value: animatableValue, fromLow: 0, fromHigh: 1, toLow: self.frame.height - mPadding, toHigh: mPadding)
+            line2Point2.x = SpringUtil.mapValueFromRangeToRange(value: animatableValue, fromLow: 0, fromHigh: 1, toLow: self.frame.width - mPadding, toHigh: self.frame.width - mPadding*1.1)
             setNeedsDisplay()
         }
     }
@@ -77,10 +82,15 @@ class MenuLayer: CALayer {
     override func draw(in ctx: CGContext) {
         
         if isFirst {
-            line1Point1.x = 10
-            line1Point1.y = 10
-            line1Point2.y = 10
-            line1Point2.x = self.frame.width - 10
+            line1Point1.x = mPadding
+            line1Point1.y = mPadding
+            line1Point2.y = mPadding
+            line1Point2.x = self.frame.width - mPadding
+            
+            line2Point1.x = mPadding
+            line2Point1.y = self.frame.height - mPadding
+            line2Point2.x = self.frame.width - mPadding
+            line2Point2.y = self.frame.height - mPadding
             isFirst = false
         }
         
@@ -92,7 +102,15 @@ class MenuLayer: CALayer {
         ctx.setLineWidth(10)
         ctx.setLineCap(.round)
         ctx.addPath(line1.cgPath)
+//        ctx.strokePath()
+        
+        let line2 = UIBezierPath()
+        line2.move(to: line2Point1)
+        line2.addLine(to: line2Point2)
+        ctx.addPath(line2.cgPath)
+        
         ctx.strokePath()
+        
         
     }
     
