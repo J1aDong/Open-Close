@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         return .lightContent
     }
 
-    let menuView = MenuView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+    let menuView = MenuView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +28,8 @@ class ViewController: UIViewController {
         
         menuView.snp.makeConstraints { (make) in
             make.center.equalTo(self.view)
-            make.width.equalTo(100)
-            make.height.equalTo(100)
+            make.width.equalTo(200)
+            make.height.equalTo(200)
         }
     }
     
